@@ -5,7 +5,10 @@ resource "aws_instance" "docker_host" {
     instance_type = "t2.micro"
     key_name = "Linux_serverKeypair"
     vpc_security_group_ids = [aws_security_group.docker_vpc_sg.id]
-
+    root_block_device {
+      volume_type = "gp3"
+      volume_size =  10
+    }
     user_data = file("userdata.sh")
 
 }
