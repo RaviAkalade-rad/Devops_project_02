@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Push image') {
             steps{
-                sh 'docker push kbindesh/flaskapp:$BUILD_NUMBER'
+                sh 'docker push ravidocker0507/flaskapp:$BUILD_NUMBER'
             }
         }
 }
