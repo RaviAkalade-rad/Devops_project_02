@@ -6,8 +6,8 @@ yum -y upgrade
 yum install -y jenkins
 systemctl start jenkins
 systemctl enable jenkins
-yum install docker -y
+yum install -y git
+amazon-linux-extras install -y docker
 service docker start
 usermod -a -G docker ec2-user
 chkconfig docker on
-yum install -y git
