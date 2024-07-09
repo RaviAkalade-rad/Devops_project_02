@@ -7,7 +7,7 @@ yum install -y jenkins
 systemctl start jenkins
 systemctl enable jenkins
 yum install -y git
-yum intsall docker -y
+yum install docker -y
 service docker start
 usermod -a -G docker ec2-user
 chkconfig docker on
