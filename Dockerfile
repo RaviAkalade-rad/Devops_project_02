@@ -3,6 +3,6 @@ LABEL maintainer="ravi.radical2024@gmail.com"
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-EXPOSE 8080
+EXPOSE 4005
 ENTRYPOINT ["python"]
 CMD ["src/app.py"]
